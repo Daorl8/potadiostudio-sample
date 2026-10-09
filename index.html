@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>포테디오 POTADIO STUDIO | 수원 행궁동 증명사진 · 프로필 · 스냅 · 웨딩</title>
 <meta name="description" content="수원 행궁동 증명사진 & 프로필 사진관 포테디오. 포즈와 표정까지 1대1 맞춤 촬영, 고해상도 파일 기본 제공. 스튜디오 촬영, 컬러 배경지 기록사진, 감자스냅, 포테디 웨딩·본식 스냅까지." />
-<meta name="theme-color" content="#FFC502" />
+<meta name="theme-color" content="#F5CB4D" />
 
 <link rel="canonical" href="https://potadiostudio-sample.lgt3232.workers.dev/" />
 <meta property="og:type" content="website" />
@@ -62,7 +62,8 @@
   --ink:#1C1B19;          /* 종이색 위 16.4:1 */
   --soft:#5C5952;         /* 6.6:1 */
   --line:#E3DFD5;
-  --yellow:#FFC502;       /* 사장님 로고 원색 · 필름 박스 노랑 (위 글자는 먹색 12:1) */
+  --yellow:#F5CB4D;       /* v0.2.2 큰 면적용 · 로고 노랑에서 채도만 낮춤 (위 글자는 먹색 12.5:1) */
+  --brand:#FFC502;        /* 사장님 로고 원색 · 번호 태그 같은 작은 표시에만 */
   --butter:#FBEBC0;
   --pink:#FFD3DD; --lav:#B3A6E0; --sky:#B4D3E6; --sage:#C9D3B8;   /* 02 Record 배경지 실측 계열 */
   --bd:var(--butter);
@@ -107,7 +108,7 @@ h1,h2,h3,h4{ margin:0; }
 .brand b{ font-family:var(--en); font-weight:800; font-size:1.3rem; letter-spacing:.02em; }
 .nav{ display:flex; align-items:center; gap:clamp(14px,2.2vw,26px); font-family:var(--en); font-size:.9rem; font-weight:600; }
 .nav a:not(.btn){ color:var(--soft); transition:color .2s ease; }
-.nav a:not(.btn) i{ font-style:normal; color:var(--ink); background:var(--yellow); padding:0 4px; margin-right:5px; font-size:.75rem; }
+.nav a:not(.btn) i{ font-style:normal; color:var(--ink); background:var(--brand); padding:0 4px; margin-right:5px; font-size:.75rem; }
 .nav .btn{ padding:.55em 1em; font-size:.85rem; font-family:var(--ko); }
 @media (hover:hover){ .nav a:not(.btn):hover{ color:var(--ink); } }
 @media (max-width:960px){ .nav a:not(.btn){ display:none; } }
@@ -131,7 +132,7 @@ h1,h2,h3,h4{ margin:0; }
 .frm{ position:relative; display:block; border:1.5px solid transparent; border-radius:var(--r); transition:border-color .4s ease; }
 .frm img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:2px; }
 .frm .lab{ position:absolute; left:6px; bottom:6px; display:flex; align-items:center; gap:6px; background:var(--paper); border:1px solid var(--ink); padding:2px 7px; font-family:var(--en); font-weight:700; font-size:.78rem; }
-.frm .lab b{ background:var(--yellow); padding:0 4px; }
+.frm .lab b{ background:var(--brand); padding:0 4px; }
 .frm.on{ border-color:var(--ink); }
 .frm.on .lab{ background:var(--yellow); }
 .box .mascot{ position:absolute; right:-14px; bottom:-26px; width:62px; transform:rotate(6deg); }
@@ -154,7 +155,7 @@ h1,h2,h3,h4{ margin:0; }
 .facts{ list-style:none; margin:0; padding:0; display:grid; gap:0; border-top:1px solid var(--line); }
 .facts li{ display:grid; grid-template-columns:56px 1fr; padding:14px 0; border-bottom:1px solid var(--line); }
 .facts .n{ font-family:var(--en); font-weight:800; }
-.facts .n i{ font-style:normal; background:var(--yellow); padding:0 5px; }
+.facts .n i{ font-style:normal; background:var(--brand); padding:0 5px; }
 .facts b{ display:block; }
 .facts span{ font-size:.92rem; color:var(--soft); }
 .subt{ margin:clamp(40px,6vw,64px) 0 16px; display:flex; justify-content:space-between; align-items:end; gap:12px; flex-wrap:wrap; }
@@ -230,7 +231,7 @@ h1,h2,h3,h4{ margin:0; }
 .info{ margin:0; border-top:1.5px solid var(--ink); }
 .info .row{ display:grid; grid-template-columns:92px 1fr; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); align-items:baseline; }
 .info dt{ font-weight:800; }
-.info dt i{ font-style:normal; background:var(--yellow); padding:0 5px; }
+.info dt i{ font-style:normal; background:var(--brand); padding:0 5px; }
 .info dd{ margin:0; }
 .info dd small{ display:block; color:var(--soft); font-size:.88rem; margin-top:2px; }
 .visit .btns{ margin-top:20px; }
