@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>포테디오 POTADIO STUDIO | 수원 행궁동 증명사진 · 프로필 사진관</title>
+<meta name="description" content="수원 행궁동 증명사진 & 프로필 전문 사진관 포테디오. 포즈와 표정까지 1대1 맞춤 촬영, 고해상도 파일 기본 제공. 증명·여권·프로필·우정·커플·가족·반려동물 촬영, 행궁동 스냅·웨딩·행사 출장 촬영." />
+<meta name="theme-color" content="#FFFFFF" />
+
+<link rel="canonical" href="https://potadiostudio-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="포테디오" />
+<meta property="og:title" content="포테디오 POTADIO STUDIO · 수원 행궁동 증명·프로필 사진관" />
+<meta property="og:description" content="포즈와 표정까지 1대1 맞춤 촬영. 증명사진 50,000원부터, 고해상도 파일 기본 제공." />
+<meta property="og:url" content="https://potadiostudio-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://potadiostudio-sample.lgt3232.workers.dev/og-potadio.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFC502'/%3E%3Ctext x='32' y='43' font-size='30' font-weight='800' text-anchor='middle' fill='%231D1D24' font-family='Arial,sans-serif'%3EP%3C/text%3E%3C/svg%3E" />
+
+<!-- 시안 도메인 = potadiostudio-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 5곳 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "포테디오",
+  "alternateName": "POTADIO STUDIO",
+  "description": "수원 행궁동 증명사진 & 프로필 전문 사진관. 포즈와 표정까지 1대1 맞춤 촬영.",
+  "url": "https://potadiostudio-sample.lgt3232.workers.dev/",
+  "image": "https://potadiostudio-sample.lgt3232.workers.dev/og-potadio.jpg",
+  "telephone": "+82-507-1491-3242",
+  "email": "sosomswn@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "정조로 894 2층",
+    "addressLocality": "팔달구",
+    "addressRegion": "경기도 수원시",
+    "addressCountry": "KR"
+  },
+  "sameAs": ["https://www.instagram.com/potadio_studio/", "https://pf.kakao.com/_Ftxdfb", "https://map.naver.com/p/entry/place/1209384874"]
+}
+</script>
+
+<!-- Fonts (OFL · 로컬 서브셋 self-host)
+     영문 제목 = Outfit 500–800 (둥근 기하 산세리프) / 한글·본문 = 나눔스퀘어라운드 R·B·EB -->
+<link rel="preload" as="font" type="font/woff2" href="pt-outfit.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="pt-round-r.woff2" crossorigin />
+<style>
+@font-face{ font-family:"Outfit"; font-style:normal; font-weight:500 800; font-display:swap; src:url("pt-outfit.woff2") format("woff2"); }
+@font-face{ font-family:"NanumSquareRound"; font-style:normal; font-weight:400; font-display:swap; src:url("pt-round-r.woff2") format("woff2"); }
+@font-face{ font-family:"NanumSquareRound"; font-style:normal; font-weight:700; font-display:swap; src:url("pt-round-b.woff2") format("woff2"); }
+@font-face{ font-family:"NanumSquareRound"; font-style:normal; font-weight:800; font-display:swap; src:url("pt-round-eb.woff2") format("woff2"); }
+
+/* ============================================================
+   포테디오 · "Backdrop Chips"
+   사장님 사진의 실제 컬러 배경지 색(라벤더·핑크·하늘·민트·버터)을 그대로 사이트 색으로.
+   흰 바탕 + 배경지 색 면/칩. 브랜드 노랑(#FFC502)은 로고 타일·파비콘에만 작게.
+   규칙 ① 그림자 대신 색 면과 둥근 모서리 ② 글자색은 항상 먹색(배경지 색 위 대비 10:1 이상)
+   ============================================================ */
+:root{
+  --white:#FFFFFF;
+  --ink:#1D1D24;          /* 흰 바탕 16.7:1 */
+  --soft:#5A5A66;         /* 6.9:1 */
+  --line:#E7E7EE;
+  --lav:#B3A6E0;          /* 실제 배경지 실측 계열 · 사진 24·59 */
+  --pink:#FFD3DD;         /* 사진 72·76·84 */
+  --sky:#B4D3E6;          /* 사진 6·19 */
+  --mint:#D8F2E4;         /* 사진 87·114 */
+  --butter:#FBEBC0;       /* 사진 110 · 브랜드 노랑을 부드럽게 */
+  --brand:#FFC502;        /* 로고 원색 · 아주 작게만 */
+  --bd:var(--lav);        /* 히어로 현재 배경지 */
+  --en:"Outfit", "NanumSquareRound", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --ko:"NanumSquareRound", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --maxw:1200px;
+  --gut:clamp(20px,5vw,48px);
+  --r:22px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+html, body{ max-width:100%; overflow-x:hidden; }
+@supports (overflow:clip){ html, body{ overflow-x:clip; } }
+body{ margin:0; font-family:var(--ko); color:var(--ink); background:var(--white); line-height:1.75; letter-spacing:-.01em; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+body.lock{ overflow:hidden; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; }
+.wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 var(--gut); }
+section[id]{ scroll-margin-top:70px; }
+h1,h2,h3,h4{ margin:0; }
+.en{ font-family:var(--en); }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+
+/* ---------- 버튼 ---------- */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:.9em 1.4em; border-radius:999px; font-size:.95rem; font-weight:800; border:1.5px solid var(--ink); background:transparent; cursor:pointer; transition:background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease; }
+.btn svg{ width:17px; height:17px; flex:none; }
+.btn.dark{ background:var(--ink); color:var(--white); }
+.btn.tint{ background:var(--bd); border-color:var(--bd); transition:background .6s ease, border-color .6s ease, color .2s ease; }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){
+  .btn.dark:hover, .btn.tint:hover{ background:var(--white); border-color:var(--ink); color:var(--ink); }
+  .btn.line:hover{ background:var(--ink); color:var(--white); }
+}
+.btns{ display:flex; flex-wrap:wrap; gap:10px; }
+
+/* ---------- 헤더 ---------- */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:14px; height:64px; }
+.brand{ display:flex; align-items:baseline; gap:8px; }
+.brand b{ font-family:var(--en); font-weight:800; font-size:1.3rem; letter-spacing:.02em; }
+.brand small{ font-size:.78rem; color:var(--soft); font-weight:700; }
+.nav{ display:flex; align-items:center; gap:clamp(14px,2.2vw,28px); font-size:.9rem; font-weight:700; }
+.nav a:not(.btn){ color:var(--soft); transition:color .2s ease; }
+.nav .btn{ padding:.55em 1.1em; font-size:.85rem; }
+@media (hover:hover){ .nav a:not(.btn):hover{ color:var(--ink); } }
+@media (max-width:900px){ .nav a:not(.btn){ display:none; } }
+
+/* ---------- 히어로: 배경지 칩 ---------- */
+.hero{ position:relative; padding:clamp(28px,5vw,64px) 0 clamp(64px,9vw,110px); isolation:isolate; }
+.hero::before{ content:""; position:absolute; inset:0 0 auto 0; height:72%; background:var(--bd); opacity:.28; z-index:-1; transition:background .8s ease; }
+.hero-grid{ display:grid; gap:34px; align-items:center; }
+.kicker{ display:inline-flex; align-items:center; gap:8px; font-size:.85rem; font-weight:800; background:var(--white); border:1.5px solid var(--ink); border-radius:999px; padding:.35em .9em; }
+.kicker i{ width:9px; height:9px; border-radius:50%; background:var(--brand); }
+.hero h1{ margin-top:22px; font-family:var(--en); font-weight:800; font-size:clamp(3rem,11vw,6.6rem); line-height:.95; letter-spacing:-.035em; }
+.hero h1 span{ display:block; }
+.hero h1 .c{ -webkit-text-stroke:2px var(--ink); color:var(--bd); transition:color .8s ease; }
+.hero .sub{ margin:22px 0 0; font-size:clamp(1.12rem,2.6vw,1.35rem); font-weight:800; }
+.hero .lead{ margin:10px 0 0; color:var(--soft); max-width:30em; }
+.hero .btns{ margin-top:28px; }
+.stage{ position:relative; }
+.frame{ position:relative; aspect-ratio:4/5; border-radius:calc(var(--r) + 8px); overflow:hidden; background:var(--bd); transition:background .8s ease; }
+.frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.04); transition:opacity .9s ease, transform 4s ease; }
+.frame img.on{ opacity:1; transform:scale(1); }
+.chips{ display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
+.chip{ display:flex; align-items:center; gap:8px; padding:.45em .9em .45em .5em; border-radius:999px; border:1.5px solid var(--line); background:var(--white); font-family:var(--en); font-weight:600; font-size:.85rem; cursor:pointer; transition:border-color .2s ease, background .2s ease; }
+.chip i{ width:20px; height:20px; border-radius:50%; border:1px solid rgba(29,29,36,.15); }
+.chip[aria-pressed="true"]{ border-color:var(--ink); }
+@media (hover:hover){ .chip:hover{ border-color:var(--ink); } }
+.stage .cap{ margin:10px 0 0; font-size:.8rem; color:var(--soft); }
+
+/* ---------- 섹션 공통 ---------- */
+.sec{ padding:clamp(80px,12vw,140px) 0 0; }
+.head{ display:grid; gap:12px; margin-bottom:clamp(30px,5vw,54px); }
+.head .tag{ display:inline-flex; align-items:center; gap:8px; font-family:var(--en); font-weight:700; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--soft); }
+.head .tag i{ width:14px; height:14px; border-radius:50%; }
+.head h2{ font-family:var(--en); font-weight:800; font-size:clamp(2.4rem,7.5vw,4.6rem); line-height:1; letter-spacing:-.03em; }
+.head h2 + p{ margin:0; font-size:1.06rem; font-weight:700; }
+.head .note{ margin:0; color:var(--soft); max-width:36em; }
+
+/* ---------- 소개 ---------- */
+.about{ display:grid; gap:30px; }
+.quote{ background:var(--mint); border-radius:var(--r); padding:clamp(26px,5vw,48px); }
+.quote p{ margin:0 0 14px; font-size:clamp(1.02rem,2.4vw,1.15rem); }
+.quote p:first-child{ font-size:clamp(1.3rem,3.6vw,1.75rem); font-weight:800; line-height:1.45; }
+.quote p:last-child{ margin-bottom:0; font-weight:700; }
+.facts{ list-style:none; margin:0; padding:0; display:grid; gap:12px; }
+.facts li{ border:1.5px solid var(--line); border-radius:var(--r); padding:18px 20px; display:grid; grid-template-columns:44px 1fr; gap:4px 12px; align-items:start; }
+.facts .dot{ grid-row:span 2; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--en); font-weight:800; }
+.facts b{ font-weight:800; }
+.facts span{ font-size:.92rem; color:var(--soft); }
+
+/* ---------- 가격 ---------- */
+.prices{ display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr)); gap:14px; }
+.pc{ border-radius:var(--r); overflow:hidden; border:1.5px solid var(--line); display:flex; flex-direction:column; background:var(--white); }
+.pc .top{ padding:18px 20px 14px; }
+.pc h3{ font-size:1.12rem; font-weight:800; }
+.pc .amt{ margin-top:6px; font-family:var(--en); font-weight:800; font-size:1.9rem; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.pc .amt small{ font-family:var(--ko); font-size:.9rem; font-weight:700; margin-left:2px; }
+.pc p{ margin:0; padding:14px 20px 18px; font-size:.9rem; color:var(--soft); border-top:1.5px solid var(--line); flex:1; }
+.pc.lav .top{ background:var(--lav); } .pc.pink .top{ background:var(--pink); } .pc.sky .top{ background:var(--sky); } .pc.mint .top{ background:var(--mint); } .pc.butter .top{ background:var(--butter); }
+.pnotes{ list-style:none; margin:22px 0 0; padding:0; display:grid; gap:6px; font-size:.92rem; color:var(--soft); }
+.pnotes li::before{ content:"·"; margin-right:8px; color:var(--ink); font-weight:800; }
+.pnotes b{ color:var(--ink); }
+
+/* ---------- 갤러리 ---------- */
+.grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(8px,1.2vw,14px); }
+.shot{ margin:0; border-radius:16px; overflow:hidden; cursor:zoom-in; background:var(--line); }
+.shot img{ width:100%; aspect-ratio:4/5; object-fit:cover; transition:transform .6s ease; }
+.shot.hide{ display:none; }
+@media (hover:hover){ .shot:hover img{ transform:scale(1.04); } }
+.more{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:28px; }
+
+.lb{ position:fixed; inset:0; z-index:100; background:rgba(255,255,255,.97); display:none; align-items:center; justify-content:center; padding:60px 14px 70px; }
+.lb.open{ display:flex; }
+.lb img{ max-height:100%; max-width:min(100%,760px); width:auto; object-fit:contain; border-radius:16px; }
+.lb .cap{ position:absolute; left:0; right:0; bottom:22px; text-align:center; font-family:var(--en); font-weight:600; font-size:.85rem; color:var(--soft); }
+.lb button{ position:absolute; background:var(--white); border:1.5px solid var(--ink); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.lb .x{ top:12px; right:12px; } .lb .prev{ left:12px; top:50%; margin-top:-23px; } .lb .next{ right:12px; top:50%; margin-top:-23px; }
+.lb button svg{ width:18px; height:18px; }
+
+/* ---------- 야외 촬영 · 안내 (토글) ---------- */
+.acc{ display:grid; gap:12px; }
+.acc details{ border:1.5px solid var(--line); border-radius:var(--r); background:var(--white); overflow:hidden; }
+.acc summary{ list-style:none; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px; padding:18px 20px; cursor:pointer; }
+.acc summary::-webkit-details-marker{ display:none; }
+.acc .sw{ width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--en); font-weight:800; font-size:.9rem; }
+.acc .t{ font-weight:800; font-size:1.04rem; line-height:1.4; }
+.acc .t small{ display:block; font-weight:400; font-size:.86rem; color:var(--soft); }
+.acc .pm{ position:relative; width:30px; height:30px; border-radius:50%; border:1.5px solid var(--ink); }
+.acc .pm::before, .acc .pm::after{ content:""; position:absolute; left:8px; right:8px; top:13px; height:1.5px; background:var(--ink); transition:transform .3s ease; }
+.acc .pm::after{ transform:rotate(90deg); }
+.acc details[open] .pm::after{ transform:rotate(0); }
+.panel{ overflow:hidden; }
+.panel-in{ padding:0 20px 22px; font-size:.95rem; }
+.panel-in p{ margin:0 0 10px; }
+.panel-in ul{ margin:0 0 12px; padding-left:1.15em; }
+.panel-in li{ margin-bottom:3px; }
+.panel-in .muted{ color:var(--soft); font-size:.88rem; }
+.plans{ display:grid; gap:10px; margin:6px 0 12px; }
+.plan{ border-radius:16px; background:#F6F6F9; padding:14px 16px; }
+.plan h4{ display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:.98rem; font-weight:800; }
+.plan h4 span{ font-family:var(--en); font-weight:800; }
+.plan p{ margin:4px 0 0; font-size:.88rem; color:var(--soft); }
+.subhead{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin:0 0 18px; }
+.subhead p{ margin:0; color:var(--soft); }
+
+/* ---------- 오시는 길 ---------- */
+.visit{ display:grid; gap:30px; }
+.info{ margin:0; display:grid; gap:10px; }
+.info .row{ display:grid; grid-template-columns:96px 1fr; gap:12px; padding:14px 18px; border-radius:16px; background:#F6F6F9; align-items:baseline; }
+.info dt{ font-weight:800; }
+.info dd{ margin:0; }
+.info dd small{ display:block; color:var(--soft); font-size:.88rem; margin-top:2px; }
+.visit .btns{ margin-top:20px; }
+.mapframe{ width:100%; aspect-ratio:4/3; border:0; display:block; border-radius:var(--r); background:var(--sky); }
+
+/* ---------- 푸터 ---------- */
+.foot{ margin-top:clamp(90px,13vw,150px); background:var(--ink); color:#D9D9E2; padding:44px 0 50px; font-size:.86rem; }
+.foot .wrap{ display:grid; gap:22px; }
+.foot img{ width:150px; border-radius:14px; }
+.foot p{ margin:0 0 6px; }
+.foot a{ text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(255,255,255,.35); }
+.foot .sw5{ display:flex; gap:6px; margin-top:10px; }
+.foot .sw5 i{ width:18px; height:18px; border-radius:50%; }
+
+/* ---------- 리빌 ---------- */
+.reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* ---------- 반응형 ---------- */
+@media (min-width:640px){ .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } .plans{ grid-template-columns:repeat(3,1fr); } }
+@media (min-width:900px){
+  .hero-grid{ grid-template-columns:1.1fr .9fr; gap:clamp(40px,6vw,90px); }
+  .about{ grid-template-columns:1.15fr .85fr; align-items:start; }
+  .grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .guide-wrap{ display:grid; grid-template-columns:.75fr 1.25fr; gap:clamp(40px,6vw,80px); align-items:start; }
+  .guide-wrap .head{ position:sticky; top:96px; }
+  .visit{ grid-template-columns:1fr 1fr; align-items:start; }
+  .foot .wrap{ grid-template-columns:auto 1fr; gap:56px; }
+}
+@media (max-width:520px){
+  .hero .btns .btn, .visit .btns .btn{ flex:1 1 calc(50% - 5px); padding-left:.8em; padding-right:.8em; }
+  .hero .btns .btn:first-child, .visit .btns .btn:first-child{ flex-basis:100%; }
+  .info .row{ grid-template-columns:72px 1fr; padding:12px 14px; }
+  .panel-in{ padding:0 16px 18px; }
+  .acc summary{ padding:16px; gap:12px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-naver" viewBox="0 0 24 24"><path fill="currentColor" d="M15.6 12.8 8.1 2H2v20h6.4V11.2L15.9 22H22V2h-6.4z"/></symbol>
+  <symbol id="i-kakao" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.5 2 10.8c0 2.8 1.9 5.2 4.7 6.6l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.5 10-7.9S17.5 3 12 3z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 5l14 14M19 5 5 19"/></symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="포테디오 처음으로"><b>POTADIO</b><small>포테디오</small></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#price">가격</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#outdoor">야외 촬영</a>
+      <a href="#guide">안내</a>
+      <a href="#visit">오시는 길</a>
+      <a class="btn dark" href="https://map.naver.com/p/entry/place/1209384874" target="_blank" rel="noopener">네이버 예약</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="kicker"><i></i>수원 행궁동 증명사진 &amp; 프로필 사진관</span>
+        <h1 id="hero-h" class="en"><span>Portraits</span><span>in <span class="c" style="display:inline">color.</span></span></h1>
+        <p class="sub">사진이 필요할 때, 편하게 떠올릴 수 있는 사진관.</p>
+        <p class="lead">고객님 고유의 분위기에 맞춰, 포즈와 표정까지 1대1 맞춤 촬영으로 진행해요.</p>
+        <div class="btns">
+          <a class="btn dark" href="https://map.naver.com/p/entry/place/1209384874" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-naver"/></svg>네이버 예약</a>
+          <a class="btn tint" href="https://pf.kakao.com/_Ftxdfb/chat" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 문의</a>
+          <a class="btn line" href="https://www.instagram.com/potadio_studio/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램</a>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="frame" id="frame">
+          <img class="on" src="pt-hero-lavender.webp" alt="라벤더색 배경 앞 인물 사진" width="1000" height="1250" fetchpriority="high" />
+          <img src="pt-hero-pink.webp" alt="연분홍 배경 앞 인물 사진" width="1000" height="1250" />
+          <img src="pt-hero-sky.webp" alt="하늘색 배경 앞 인물 사진" width="1000" height="1250" />
+          <img src="pt-hero-mint.webp" alt="민트색 배경 앞 인물 사진" width="1000" height="1250" />
+          <img src="pt-hero-butter.webp" alt="버터색 배경 앞 반려견과 함께한 인물 사진" width="1000" height="1250" />
+        </div>
+        <div class="chips" role="group" aria-label="배경 색 보기">
+          <button class="chip" type="button" data-i="0" data-c="var(--lav)" aria-pressed="true"><i style="background:var(--lav)"></i>Lavender</button>
+          <button class="chip" type="button" data-i="1" data-c="var(--pink)" aria-pressed="false"><i style="background:var(--pink)"></i>Pink</button>
+          <button class="chip" type="button" data-i="2" data-c="var(--sky)" aria-pressed="false"><i style="background:var(--sky)"></i>Sky</button>
+          <button class="chip" type="button" data-i="3" data-c="var(--mint)" aria-pressed="false"><i style="background:var(--mint)"></i>Mint</button>
+          <button class="chip" type="button" data-i="4" data-c="var(--butter)" aria-pressed="false"><i style="background:var(--butter)"></i>Butter</button>
+        </div>
+        <p class="cap">포테디오에서 촬영한 컬러 배경 사진이에요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about" aria-labelledby="about-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--mint)"></i>About</span>
+        <h2 id="about-h">Hello, POTADIO.</h2>
+      </div>
+      <div class="about">
+        <div class="quote reveal">
+          <p>포테디오는 증명사진 한 장에서 시작해, 지금은 다양한 순간을 기록하고 있어요.</p>
+          <p>사진은 단순히 이미지를 남기는 일이 아니라, 사람들의 시간과 감정, 그리고 기억을 기록하는 일이라고 생각해요.</p>
+          <p>처음에는 어색했던 촬영이 점점 자연스러워지고, 촬영이 끝날 때 웃으면서 사진을 확인하는 그 순간을 가장 좋아합니다.</p>
+        </div>
+        <ul class="facts">
+          <li class="reveal"><span class="dot" style="background:var(--lav)">1:1</span><b>포즈와 표정까지 맞춤 촬영</b><span>고객님 고유의 분위기에 맞춰 디렉팅해요.</span></li>
+          <li class="reveal"><span class="dot" style="background:var(--sky)">HD</span><b>고해상도 파일 기본 제공</b><span>추가 비용 없이 드려요.</span></li>
+          <li class="reveal"><span class="dot" style="background:var(--pink)">2F</span><b>행궁동, 2층 전체 스튜디오</b><span>따뜻한 분위기에서 편안하게 촬영해요.</span></li>
+          <li class="reveal"><span class="dot" style="background:var(--butter)">100</span><b>리뷰 이벤트 없음</b><span>모든 리뷰는 실제 방문 고객님의 솔직한 후기예요.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="price" aria-labelledby="price-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--butter)"></i>Price</span>
+        <h2 id="price-h">Studio menu.</h2>
+        <p class="note">스튜디오 촬영 가격이에요. 상세 옵션과 예약은 네이버 예약 상품에서 확인해 주세요.</p>
+      </div>
+      <div class="prices">
+        <article class="pc lav reveal"><div class="top"><h3>포테디오 증명사진</h3><div class="amt">50,000<small>원</small></div></div><p>포테디오만의 색감과 보정법으로 완성되는, 깔끔하고 퓨어한 증명사진이에요.</p></article>
+        <article class="pc sky reveal"><div class="top"><h3>여권 사진</h3><div class="amt">25,000<small>원</small></div></div><p>비대면 보정으로 약 10분 뒤 수령. 여권 규격 8매 + 제출용 파일.</p></article>
+        <article class="pc pink reveal"><div class="top"><h3>화보 프로필</h3><div class="amt">119,000<small>원</small></div></div><p>포즈와 표정, 조명까지 디렉팅해 각자의 분위기와 매력을 자연스럽게 담아요.</p></article>
+        <article class="pc mint reveal"><div class="top"><h3>내모습 기록사진</h3><div class="amt">60,000<small>원</small></div></div><p>상세 구성은 네이버 예약 상품에서 확인해 주세요.</p></article>
+        <article class="pc butter reveal"><div class="top"><h3>우정사진</h3><div class="amt">75,000<small>원</small></div></div><p>친구와 함께하는 단체 촬영.</p></article>
+        <article class="pc pink reveal"><div class="top"><h3>커플사진</h3><div class="amt">90,000<small>원</small></div></div><p>두 사람의 분위기를 담는 커플 촬영.</p></article>
+        <article class="pc lav reveal"><div class="top"><h3>가족사진</h3><div class="amt">130,000<small>원</small></div></div><p>따뜻한 느낌의 미장 배경과 캐주얼한 흰 배경, 두 가지 스타일로 촬영해요.</p></article>
+        <article class="pc sky reveal"><div class="top"><h3>웨딩사진</h3><div class="amt">문의<small></small></div></div><p>구성에 따라 가격이 달라져요. 카카오채널로 문의해 주세요.</p></article>
+      </div>
+      <ul class="pnotes reveal">
+        <li><b>고해상도 파일</b>은 모든 촬영에 무료로 기본 제공돼요.</li>
+        <li><b>반려동물 촬영</b>도 가능해요.</li>
+        <li><b>사진 인화</b> 3×5in 600원 · 4×6in 800원 · 핸드폰 사진 인화는 카카오채널 @포테디오로 문의해 주세요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="gallery" aria-labelledby="gallery-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--pink)"></i>Gallery</span>
+        <h2 id="gallery-h">Shot at POTADIO.</h2>
+        <p class="note">사진을 누르면 크게 볼 수 있어요. 더 많은 사진은 인스타그램 @potadio_studio에서.</p>
+      </div>
+      <div class="grid" id="grid">
+        <figure class="shot"><img loading="lazy" src="pt-g-01.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-02.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-03.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-04.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-05.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-06.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-07.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-08.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-09.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-10.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-11.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-12.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-13.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-14.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-15.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-16.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-17.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-18.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-19.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-20.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-21.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-22.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-23.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-24.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-25.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-26.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-27.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-28.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-29.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-30.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-31.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-32.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-33.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-34.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-35.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-36.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-37.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-38.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-39.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-40.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-41.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-42.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-43.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-44.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-45.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-46.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-47.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-48.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-49.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-50.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-51.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-52.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-53.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-54.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-55.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-56.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-57.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-58.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-59.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-60.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-61.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-62.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-63.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-64.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-65.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-66.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-67.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-68.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-69.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-70.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-71.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-72.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-73.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-74.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+        <figure class="shot"><img loading="lazy" src="pt-g-75.webp" alt="포테디오 촬영 사진" width="800" height="1000" /></figure>
+      </div>
+      <div class="more">
+        <button class="btn line" type="button" id="moreBtn">사진 더 보기</button>
+        <a class="btn line" href="https://www.instagram.com/potadio_studio/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램에서 더 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+    <button class="x" type="button" aria-label="닫기"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="prev" type="button" aria-label="이전 사진"><svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+    <img alt="" />
+    <button class="next" type="button" aria-label="다음 사진"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    <p class="cap"></p>
+  </div>
+
+  <section class="sec" id="outdoor" aria-labelledby="outdoor-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--sky)"></i>Outdoor · For Teddy You</span>
+        <h2 id="outdoor-h">Outside the studio.</h2>
+        <p class="note">스튜디오 밖에서 진행하는 촬영은 포테디오의 외부 촬영 브랜드 ‘포테디(For Teddy You)’에서 진행해요. 행궁동 스냅부터 웨딩, 행사 촬영까지. 예약·문의는 카카오채널로 부탁드려요.</p>
+      </div>
+      <div class="acc reveal">
+        <details>
+          <summary><span class="sw" style="background:var(--mint)">01</span><span class="t">행궁동 스냅<small>1시간 80,000원 · 1인 기본</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>행궁동 골목과 화성 성곽을 배경으로 한 자연스럽고 감성적인 스냅이에요. 여행 · 개인 · 커플 촬영이 가능해요.</p>
+            <p><b>주요 코스</b> 화성 성곽 · 행궁동 골목 · 행궁동 카페</p>
+            <ul>
+              <li>색감 보정본 전체 제공 (원본 당일 / 보정본은 셀렉 후 7일 이내)</li>
+              <li>세밀 보정본 4장 · 원본 약 100~200장 촬영</li>
+            </ul>
+            <p class="muted">인원 추가 +30,000원(1인, 어린이 제외) · 30분 추가 +30,000원 · 보정본 추가 +3,000원 · 앨범·액자·출력, 행궁동 외 지역은 별도 문의</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--pink)">02</span><span class="t">웨딩 스냅<small>2시간~ · 2인 · 350,000원부터</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>수원 행궁동에서 담는 웨딩 스냅이에요. 웨딩 포즈 디렉팅, 인물에 맞춘 장소 선정, 소품·부케 무료 대여가 포함돼요. (의상·헤어메이크업은 별도 준비)</p>
+            <p><b>주요 코스</b> 화성 성곽 · 행궁동 골목 · 행궁동 카페 · 행궁 광장 · 방화수류정 · 창룡문 (그 외 지역은 사전 문의)</p>
+            <div class="plans">
+              <div class="plan"><h4>A. 라이트<span>350,000</span></h4><p>2시간 · 야외 2스팟 · 원본 전체 · 세밀 보정본 10장</p></div>
+              <div class="plan"><h4>B. 스탠다드<span>480,000</span></h4><p>3~4시간 · 야외 3스팟 · 원본 전체 · 색감 보정본 3장 · 세밀 보정본 15장 · 헬퍼 무료</p></div>
+              <div class="plan"><h4>C. 프리미엄<span>550,000</span></h4><p>5시간+ · 야외 3스팟+ · 스튜디오 실내 촬영 가능 · 원본 전체 · 색감 보정본 5장 · 세밀 보정본 20장 · 헬퍼 무료</p></div>
+            </div>
+            <p class="muted">전 상품 11R 아크릴 액자 무료 · 야간 촬영 / 행궁동 외 장소 +50,000원 · 스튜디오 1시간 +100,000원 · 유색 드레스 대여 +30,000원 · 한복 드레스 대여 +50,000원 · 1시간 추가 +80,000원 · 보정본 추가 +5,000원</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--lav)">03</span><span class="t">본식(결혼식) 스냅<small>2~3시간 · 300,000원부터</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>결혼식의 메인 순간부터 소소한 감정까지, 자연스러운 흐름 속에서 두 사람의 하루를 따뜻하게 기록해요.</p>
+            <p><b>촬영 범위</b> 신부 대기실 · 본식 과정 전체 · 원판 촬영 &nbsp;/&nbsp; <b>기본</b> 원본 전체(약 1,000~1,500장) · 11R 아크릴 액자</p>
+            <div class="plans">
+              <div class="plan"><h4>A. 서브 스냅<span>300,000</span></h4><p>세밀 보정본 10장 · 연출 촬영 미포함</p></div>
+              <div class="plan"><h4>B. 메인 스냅<span>450,000</span></h4><p>세밀 보정본 15장 · 연출 촬영 포함</p></div>
+              <div class="plan"><h4>C. 메인 프리미엄<span>600,000</span></h4><p>세밀 보정본 20장 · 연출 촬영 포함 · 20P 앨범 포함</p></div>
+            </div>
+            <p class="muted">메이크업실 / 폐백 / 피로연 각 +50,000원 · 서브 작가 추가 +200,000원 · 수원 외곽 지역 출장비 별도</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--sky)">04</span><span class="t">행사 · 출장 촬영<small>4시간 기준 250,000원부터</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>행사의 흐름을 방해하지 않으면서 중요한 순간과 현장의 분위기를 기록해요. 색감 보정본 전체 제공, 원본은 당일 구글 드라이브로 전달해요.</p>
+            <div class="plans">
+              <div class="plan"><h4>행사 스케치<span>250,000</span></h4><p>4시간 기준 · 기업 행사 · 학교 행사 · 공연</p></div>
+              <div class="plan"><h4>행사 연출<span>350,000</span></h4><p>4시간 기준 · 돌잔치 · 칠순잔치 · 졸업식 · 기념 행사</p></div>
+              <div class="plan"><h4>스튜디오 출장<span>150,000~</span></h4><p>현장에 스튜디오 세팅 · 학교 증명사진 · 졸업 사진 · 기업·단체 프로필 (인당 별도)</p></div>
+            </div>
+            <p class="muted">1시간 추가 +50,000원 · 수원 외 지역 출장비 +50,000원 · 생중계·보정 추가는 별도 문의</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--butter)">05</span><span class="t">제품 촬영<small>1컷 20,000원부터</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>음식, 매장, 제품 등 브랜드를 보여주는 촬영이에요. 배달앱·SNS·홍보용으로 실제 쓰일 이미지를 고려해 찍어요. 원본 전체와 제품별 메인컷 보정본을 드려요.</p>
+            <div class="plans">
+              <div class="plan"><h4>A. 기본 제품<span>1컷 20,000</span></h4><p>메뉴 · 의류 · 제품 · 소규모 SNS 업로드용</p></div>
+              <div class="plan"><h4>B. 연출 제품<span>1컷 40,000</span></h4><p>음식 · 카페 메뉴 · 브랜드 이미지 컷 · 상세페이지용 (AI 리터치 포함)</p></div>
+              <div class="plan"><h4>C. 브랜드 패키지<span>300,000</span></h4><p>매장 전경(외부·내부) · 메뉴 6~8종 · 디테일 컷 · 핸드 연출 컷</p></div>
+            </div>
+          </div></div>
+        </details>
+      </div>
+      <div class="btns reveal" style="margin-top:22px">
+        <a class="btn line" href="https://pf.kakao.com/_Ftxdfb/chat" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-kakao"/></svg>야외 촬영 문의</a>
+        <a class="btn line" href="https://www.instagram.com/for_teddy_you" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>@for_teddy_you</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="guide" aria-labelledby="guide-h">
+    <div class="wrap guide-wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--lav)"></i>Guide</span>
+        <h2 id="guide-h">Good to know.</h2>
+        <p class="note">방문 전에 한 번 읽어주세요.</p>
+      </div>
+      <div class="acc reveal">
+        <details>
+          <summary><span class="sw" style="background:var(--lav)">01</span><span class="t">예약 안내<small>100% 네이버 예약 우선제</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <ul>
+              <li>예약은 네이버 예약으로 받아요. 휴무일은 바뀔 수 있으니 네이버 예약에서 확인해 주세요.</li>
+              <li>포테디오는 1인 스튜디오라 촬영 중에는 답변이 늦을 수 있어요.</li>
+              <li>출장 촬영이 있는 날은 스튜디오가 임시 휴무로 바뀌어요.</li>
+              <li>예약 없이 방문하실 경우 미리 연락 부탁드려요.</li>
+            </ul>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--sky)">02</span><span class="t">여권 사진 안내<small>예약 없이 당일 촬영 가능</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>여권 사진은 예약 없이 당일 촬영할 수 있어요. 방문 전 전화를 권장드리고, 예약하시면 대기 없이 촬영해요.</p>
+            <ul>
+              <li>촬영 후 여권에 맞춘 비대면 보정, 약 10분 뒤 수령</li>
+              <li>기본 제공: 여권 규격 사진 8매(3.5×4.5cm) + 제출용 파일</li>
+              <li>규격 참고: 컬러렌즈·흰 옷 불가, 눈썹과 귀 노출</li>
+            </ul>
+            <p class="muted">대면 상품보다 할인된 가격이에요. 해외 비자 사진은 나라별로 상품이 달라 추가금이 있어요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--pink)">03</span><span class="t">촬영 상품 한눈에<small>스튜디오 · 외부 촬영</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p><b>스튜디오</b> 증명사진 · 프로필 · 단체 사진(가족 · 우정) · 반려동물 · 웨딩</p>
+            <p><b>외부 촬영</b> 스냅(개인 · 웨딩 · 결혼식) · 출장(행사 · 회사 프로필) · 졸업 앨범 촬영 등</p>
+            <p class="muted">출장 상품은 카카오채널로 따로 문의해 주세요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--mint)">04</span><span class="t">주차 · 찾아오는 길<small>전용 차고 이용 가능</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p><b>차량</b> 건물 뒷골목, 카페 ‘버트’ 건너편 포테디오 전용 차고를 이용해 주세요. 안에 차가 있으면 입구를 막고 주차하셔도 돼요. 주차 후 골목을 나와 큰길 ‘부라더미싱’ 옆 입구 2층이에요.</p>
+            <p><b>버스</b> ‘장안문. 수원전통문화관’ 정류장에서 내려 장안문 방향(북쪽)으로 걸어서 2분, 하얀 건물 2층이에요.</p>
+            <p><b>도보</b> 북문(장안문)에서 보이는 수원전통문화관(넓은 한옥 건물) 건너편이에요.</p>
+            <p class="muted">2층에 오셔서 벨을 눌러주세요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="sw" style="background:var(--butter)">05</span><span class="t">문의 · 인화<small>카카오채널 @포테디오 · 네이버 톡톡</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>궁금한 점은 카카오채널 @포테디오나 네이버 톡톡으로 남겨주세요.</p>
+            <p>핸드폰 사진 인화도 가능해요. 3×5in 600원 · 4×6in 800원, 카카오채널로 문의해 주세요.</p>
+            <p class="muted">포테디오는 수원 영통 소솜스튜디오 수원점에서 상호를 바꿔 운영 중이에요.</p>
+          </div></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="tag"><i style="background:var(--sky)"></i>Visit</span>
+        <h2 id="visit-h">Find us.</h2>
+      </div>
+      <div class="visit">
+        <div class="reveal">
+          <dl class="info">
+            <div class="row"><dt>주소</dt><dd>경기 수원시 팔달구 정조로 894, 2층<small>큰길 ‘부라더미싱’ 옆 입구 · 하얀 건물 2층</small></dd></div>
+            <div class="row"><dt>버스</dt><dd>장안문. 수원전통문화관 정류장 하차<small>장안문 방향으로 도보 2분</small></dd></div>
+            <div class="row"><dt>주차</dt><dd>전용 차고 이용 가능<small>건물 뒷골목, 카페 ‘버트’ 건너편</small></dd></div>
+            <div class="row"><dt>영업</dt><dd>네이버 예약 기준<small>점심시간 13:00–14:00 · 휴무일은 변동될 수 있어요.</small></dd></div>
+            <div class="row"><dt>전화</dt><dd><a href="tel:0507-1491-3242">0507-1491-3242</a><small>촬영 중에는 답변이 늦을 수 있어요.</small></dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn dark" href="https://map.naver.com/p/entry/place/1209384874" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-naver"/></svg>네이버 예약</a>
+            <a class="btn tint" href="https://pf.kakao.com/_Ftxdfb/chat" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 문의</a>
+            <a class="btn line" href="https://www.instagram.com/potadio_studio/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램</a>
+          </div>
+        </div>
+        <iframe class="mapframe reveal" src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%ED%8C%94%EB%8B%AC%EA%B5%AC%20%EC%A0%95%EC%A1%B0%EB%A1%9C%20894&output=embed" title="포테디오 위치 지도 · 경기 수원시 팔달구 정조로 894" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img src="pt-logo.webp" alt="포테디오 로고" width="480" height="183" loading="lazy" />
+      <div class="sw5" aria-hidden="true"><i style="background:var(--lav)"></i><i style="background:var(--pink)"></i><i style="background:var(--sky)"></i><i style="background:var(--mint)"></i><i style="background:var(--butter)"></i></div>
+    </div>
+    <div>
+      <p>포테디오 POTADIO STUDIO · 경기 수원시 팔달구 정조로 894, 2층 · <a href="tel:0507-1491-3242">0507-1491-3242</a> · <a href="mailto:sosomswn@gmail.com">sosomswn@gmail.com</a></p>
+      <p><a href="https://map.naver.com/p/entry/place/1209384874" target="_blank" rel="noopener">네이버 예약</a> · <a href="https://pf.kakao.com/_Ftxdfb/chat" target="_blank" rel="noopener">카카오채널 @포테디오</a> · <a href="https://www.instagram.com/potadio_studio/" target="_blank" rel="noopener">@potadio_studio</a> · <a href="https://www.instagram.com/for_teddy_you" target="_blank" rel="noopener">@for_teddy_you</a></p>
+      <p>© 2026 POTADIO STUDIO</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* 리빌 (IntersectionObserver + 2.4초 안전망) */
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  var show=function(el){ el.classList.add('in'); };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } }); }, {threshold:.06});
+    items.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ items.forEach(show); }, 2400);
+  } else { items.forEach(show); }
+
+  /* 히어로 배경지 칩: 자동 순환(setInterval) + 클릭하면 그 색으로 */
+  var root=document.documentElement;
+  var imgs=[].slice.call(document.querySelectorAll('#frame img'));
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var cur=0, hold=0;
+  function go(i){
+    imgs[cur].classList.remove('on'); chips[cur].setAttribute('aria-pressed','false');
+    cur=i;
+    imgs[cur].classList.add('on'); chips[cur].setAttribute('aria-pressed','true');
+    root.style.setProperty('--bd', chips[cur].getAttribute('data-c'));
+  }
+  chips.forEach(function(c,i){ c.addEventListener('click', function(){ go(i); hold=2; }); });
+  setInterval(function(){ if(hold>0){ hold--; return; } go((cur+1)%imgs.length); }, 3800);
+
+  /* 갤러리 더 보기 (20장씩) */
+  var shots=[].slice.call(document.querySelectorAll('#grid .shot'));
+  var moreBtn=document.getElementById('moreBtn');
+  var STEP=20, shown=STEP;
+  function render(){
+    shots.forEach(function(s,i){ s.classList.toggle('hide', i>=shown); });
+    var left=shots.length-shown;
+    moreBtn.style.display = left>0 ? '' : 'none';
+    if(left>0) moreBtn.textContent='사진 더 보기 (' + shown + ' / ' + shots.length + ')';
+  }
+  moreBtn.addEventListener('click', function(){ shown+=STEP; render(); });
+  render();
+
+  /* 라이트박스 */
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('.cap');
+  var list=[], idx=0, lastFocus=null;
+  function paint(){ var im=list[idx].querySelector('img'); lbImg.src=im.getAttribute('src'); lbImg.alt=im.alt; lbCap.textContent=(idx+1)+' / '+list.length; }
+  function open(i){ list=shots.filter(function(s){ return !s.classList.contains('hide'); }); idx=i; paint(); lastFocus=document.activeElement; lb.classList.add('open'); document.body.classList.add('lock'); lb.querySelector('.x').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.classList.remove('lock'); if(lastFocus) lastFocus.focus(); }
+  function step(d){ idx=(idx+d+list.length)%list.length; paint(); }
+  shots.forEach(function(s){
+    s.setAttribute('tabindex','0'); s.setAttribute('role','button');
+    s.addEventListener('click', function(){ var vis=shots.filter(function(x){ return !x.classList.contains('hide'); }); open(vis.indexOf(s)); });
+    s.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); s.click(); } });
+  });
+  lb.querySelector('.x').addEventListener('click', close);
+  lb.querySelector('.prev').addEventListener('click', function(){ step(-1); });
+  lb.querySelector('.next').addEventListener('click', function(){ step(1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') step(-1); else if(e.key==='ArrowRight') step(1); });
+  var tx=null;
+  lb.addEventListener('touchstart', function(e){ tx=e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>40) step(dx<0?1:-1); tx=null; });
+
+  /* 토글 부드럽게 */
+  [].slice.call(document.querySelectorAll('.acc details')).forEach(function(d){
+    var sum=d.querySelector('summary'), panel=d.querySelector('.panel'), busy=false;
+    sum.addEventListener('click', function(e){
+      e.preventDefault(); if(busy) return; busy=true;
+      if(d.open){
+        panel.style.height=panel.scrollHeight+'px';
+        requestAnimationFrame(function(){ panel.style.transition='height .35s ease'; panel.style.height='0px'; });
+        setTimeout(function(){ d.open=false; panel.style.cssText=''; busy=false; }, 380);
+      } else {
+        d.open=true; panel.style.height='0px';
+        requestAnimationFrame(function(){ panel.style.transition='height .35s ease'; panel.style.height=panel.scrollHeight+'px'; });
+        setTimeout(function(){ panel.style.cssText=''; busy=false; }, 380);
+      }
+    });
+  });
+
+  /* 앵커 부드러운 스크롤 */
+  var head=document.querySelector('.site-head');
+  var ease=function(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; };
+  document.addEventListener('click', function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href'); if(id.length<2) return;
+    var target=id==='#top' ? document.body : document.querySelector(id); if(!target) return;
+    ev.preventDefault();
+    var off=(head ? head.offsetHeight : 0)+6, startY=window.pageYOffset;
+    var endY=target===document.body ? 0 : Math.max(0, target.getBoundingClientRect().top+startY-off);
+    var dist=endY-startY, dur=Math.min(900, Math.max(420, Math.abs(dist)*.45)), t0=null;
+    function f(ts){ if(t0===null) t0=ts; var p=Math.min(1,(ts-t0)/dur); window.scrollTo(0, startY+dist*ease(p)); if(p<1) requestAnimationFrame(f); }
+    requestAnimationFrame(f);
+    if(history.replaceState) history.replaceState(null,'',id);
+  });
+})();
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>
