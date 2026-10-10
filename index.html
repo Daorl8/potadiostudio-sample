@@ -273,7 +273,7 @@ h1,h2,h3,h4{ margin:0; }
 .js .splash{ position:fixed; inset:0; z-index:300; background:#FFFFFF; display:flex; align-items:center; justify-content:center; transition:opacity .6s ease, visibility .6s ease; cursor:pointer; }
 .js.seen .splash{ display:none; }
 .splash.done{ opacity:0; visibility:hidden; }
-.gj{ position:relative; width:min(380px,78vw); aspect-ratio:1; }
+.gj{ position:relative; width:min(380px,78vw); aspect-ratio:1; opacity:0; }   /* 등장 페이드는 JS(setInterval)가 opacity 0→1 */
 .gj > img, .gj > svg{ position:absolute; inset:0; width:100%; height:100%; }
 .gj > svg{ overflow:visible; }
 .gj .cam{ position:absolute; inset:0; transform-origin:66.41% 58.59%; }
@@ -845,13 +845,16 @@ h1,h2,h3,h4{ margin:0; }
       setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 800);
       try{ sessionStorage.setItem('pt-intro','1'); }catch(err){}
     };
+    var gj=intro.querySelector('.gj'), FADE=600, HOLD=350;   /* 0.6초 페이드인, 0.35초 뒤부터 모션 */
     var tm=setInterval(function(){
-      var e=(Date.now()-start)/D;
+      var el=Date.now()-start;
+      var a=Math.min(1, el/FADE); gj.style.opacity=(a*a*(3-2*a)).toFixed(3);
+      var e=Math.max(0, el-HOLD)/D;
       frame(Math.min(e,END));
       if(e>=END) finish();
     }, 16);
     intro.addEventListener('click', finish);
-    setTimeout(finish, 5000);
+    setTimeout(finish, 5500);
   } else if(intro){ intro.parentNode.removeChild(intro); }
 
   /* 리빌 (IntersectionObserver + 2.4초 안전망) */
