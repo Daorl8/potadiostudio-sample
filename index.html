@@ -45,6 +45,9 @@
 <!-- Fonts (OFL · 로컬 서브셋 self-host) 영문 제목 = Outfit 500–800 / 한글·본문 = Pretendard (가변) -->
 <link rel="preload" as="font" type="font/woff2" href="pt-outfit.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="pt-pretendard.woff2" crossorigin />
+<link rel="preload" as="image" href="gj-body.webp" />
+<link rel="preload" as="image" href="gj-cam.webp" />
+<script>(function(d){ d.className+=' js'; try{ if(sessionStorage.getItem('pt-intro')) d.className+=' seen'; }catch(e){} })(document.documentElement);</script>
 <style>
 @font-face{ font-family:"Outfit"; font-style:normal; font-weight:500 800; font-display:swap; src:url("pt-outfit.woff2") format("woff2"); }
 @font-face{ font-family:"Pretendard"; font-style:normal; font-weight:400 800; font-display:swap; src:url("pt-pretendard.woff2") format("woff2"); }
@@ -265,6 +268,25 @@ h1,h2,h3,h4{ margin:0; }
 .lb .x{ top:12px; right:12px; } .lb .prev{ left:12px; top:50%; margin-top:-23px; } .lb .next{ right:12px; top:50%; margin-top:-23px; }
 .lb button svg{ width:18px; height:18px; }
 
+/* ---------- 첫 진입 인트로: 감자 작가가 카메라를 들어 찰칵 (사장님 제공 애니메이션 이식) ---------- */
+.splash{ display:none; }
+.js .splash{ position:fixed; inset:0; z-index:300; background:#FFFFFF; display:flex; align-items:center; justify-content:center; transition:opacity .6s ease, visibility .6s ease; cursor:pointer; }
+.js.seen .splash{ display:none; }
+.splash.done{ opacity:0; visibility:hidden; }
+.gj{ position:relative; width:min(380px,78vw); aspect-ratio:1; }
+.gj > img, .gj > svg{ position:absolute; inset:0; width:100%; height:100%; }
+.gj > svg{ overflow:visible; }
+.gj .cam{ position:absolute; inset:0; transform-origin:66.41% 58.59%; }
+.gj .cam img{ position:absolute; inset:0; width:100%; height:100%; }
+.gj .fl{ position:absolute; left:79.6%; top:60.7%; width:0; height:0; opacity:0; }
+.gj .fl i{ position:absolute; display:block; border-radius:999px; }
+.gj .fl .glow{ left:-60px; top:-60px; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle,#fff 0%,rgba(255,255,255,.95) 18%,rgba(255,246,200,.6) 40%,rgba(255,246,200,0) 70%); }
+.gj .fl .h{ left:-80px; top:-2px; width:160px; height:4px; background:linear-gradient(90deg,rgba(255,255,255,0),#fff,rgba(255,255,255,0)); }
+.gj .fl .v{ left:-2px; top:-80px; width:4px; height:160px; background:linear-gradient(180deg,rgba(255,255,255,0),#fff,rgba(255,255,255,0)); }
+.gj .fl .d1, .gj .fl .d2{ left:-45px; top:-1.5px; width:90px; height:3px; background:linear-gradient(90deg,rgba(255,255,255,0),#fff,rgba(255,255,255,0)); }
+.gj .fl .d1{ transform:rotate(45deg); } .gj .fl .d2{ transform:rotate(-45deg); }
+.splash .scr{ position:absolute; inset:0; background:#fff; opacity:0; pointer-events:none; }
+
 /* ---------- 리빌 ---------- */
 .reveal{ opacity:0; transform:translateY(18px); transition:opacity .8s ease, transform .8s ease; }
 .reveal.in{ opacity:1; transform:none; }
@@ -304,6 +326,18 @@ h1,h2,h3,h4{ margin:0; }
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 12h15M13 6l6 6-6 6"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 5l14 14M19 5 5 19"/></symbol>
 </svg>
+
+<div class="splash" id="splash" aria-hidden="true">
+  <div class="gj">
+    <img src="gj-body.webp" alt="" width="768" height="768" />
+    <svg viewBox="0 0 1024 1024" aria-hidden="true"><path id="gjArm" d="M252 535 C240 612 345 628 440 628 Q490 626 520 612" fill="none" stroke="rgb(66,111,56)" stroke-width="42" stroke-linecap="round"/><path id="gjArm2" d="M742 415 Q772 455 782 510" fill="none" stroke="rgb(66,111,56)" stroke-width="44" stroke-linecap="round"/></svg>
+    <div class="cam" id="gjCam">
+      <img src="gj-cam.webp" alt="" width="768" height="768" />
+      <div class="fl" id="gjFl"><i class="glow"></i><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+    </div>
+  </div>
+  <div class="scr" id="gjScr"></div>
+</div>
 
 <header class="site-head">
   <div class="wrap">
@@ -781,6 +815,44 @@ h1,h2,h3,h4{ margin:0; }
 <script>
 (function(){
   var root=document.documentElement;
+
+  /* 첫 진입 인트로: 감자 작가 찰칵 (세션당 1회 · setInterval 구동 · 누르면 건너뜀) */
+  var intro=document.getElementById('splash');
+  if(intro && !/\bseen\b/.test(root.className)){
+    var cam=document.getElementById('gjCam'), arm=document.getElementById('gjArm'), arm2=document.getElementById('gjArm2'),
+        fl=document.getElementById('gjFl'), scr=document.getElementById('gjScr');
+    var D=3200, END=.9, start=Date.now(), finished=false;
+    document.body.classList.add('lock');
+    var io3=function(x){ return x<.5 ? 4*x*x*x : 1-Math.pow(-2*x+2,3)/2; };
+    var frame=function(e){
+      var seg=function(a,b){ return Math.min(1,Math.max(0,(e-a)/(b-a))); };
+      var lift=io3(seg(.12,.32))-io3(seg(.66,.86));
+      var dip=(e>.42 && e<.48) ? Math.sin(Math.PI*(e-.42)/.06) : 0;
+      var dx=45*lift, dy=-70*lift+8*dip, r=-6*lift+1.5*dip;
+      cam.style.transform='translate('+(dx/10.24)+'%,'+(dy/10.24)+'%) rotate('+r+'deg)';
+      var rad=r*Math.PI/180, c=Math.cos(rad), s0=Math.sin(rad);
+      var T=function(x,y,k){ var X=x-680, Y=y-600, tx=680+X*c-Y*s0+dx, ty=600+X*s0+Y*c+dy; return (x+(tx-x)*k).toFixed(1)+' '+(y+(ty-y)*k).toFixed(1); };
+      arm.setAttribute('d','M'+T(252,535,.3)+' C'+T(240,612,.45)+' '+T(345,628,.7)+' '+T(440,628,.85)+' Q'+T(490,626,.95)+' '+T(520,612,1));
+      arm2.setAttribute('d','M'+T(742,415,.3)+' Q'+T(772,455,.7)+' '+T(782,510,1));
+      var f=e<.445 ? 0 : e<.455 ? (e-.445)/.01 : Math.max(0,1-(e-.455)/.1);
+      fl.style.opacity=f; fl.style.transform='scale('+(0.3+0.9*f)+') rotate('+(e*60)+'deg)';
+      var s=e<.445 ? 0 : e<.455 ? (e-.445)/.01 : Math.max(0,1-(e-.455)/.075);
+      scr.style.opacity=s*.85;
+    };
+    var finish=function(){
+      if(finished) return; finished=true; clearInterval(tm);
+      intro.classList.add('done'); document.body.classList.remove('lock');
+      setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 800);
+      try{ sessionStorage.setItem('pt-intro','1'); }catch(err){}
+    };
+    var tm=setInterval(function(){
+      var e=(Date.now()-start)/D;
+      frame(Math.min(e,END));
+      if(e>=END) finish();
+    }, 16);
+    intro.addEventListener('click', finish);
+    setTimeout(finish, 5000);
+  } else if(intro){ intro.parentNode.removeChild(intro); }
 
   /* 리빌 (IntersectionObserver + 2.4초 안전망) */
   var items=[].slice.call(document.querySelectorAll('.reveal'));
